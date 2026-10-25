@@ -1893,3 +1893,43 @@ html.premium-motion .premium-reveal.is-visible {
         max-width: 270px;
     }
 }
+
+
+
+/* Compact project cards */
+.compact-project-card {
+    max-width: 100%;
+    min-width: 0;
+}
+
+.compact-project-card .showcase-preview {
+    min-height: 170px;
+    padding: 20px;
+}
+
+.compact-project-card .showcase-body {
+    padding: 20px;
+}
+
+.compact-project-card .showcase-body h3 {
+    font-size: 20px;
+}
+
+.compact-project-card .showcase-body > p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.compact-project-card .tech-list {
+    gap: 6px;
+}
+
+.compact-project-card .tech-list span {
+    font-size: 12px;
+    padding: 5px 9px;
+}
+
+.compact-project-card .showcase-link {
+    font-size: 14px;
+}
+
