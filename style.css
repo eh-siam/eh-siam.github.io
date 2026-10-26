@@ -1583,3 +1583,161 @@ textarea:focus-visible {
     }
 }
 
+/* Event Planner smartphone showcase */
+
+#projects .phone-showcase {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 28px 16px;
+    min-height: 370px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(32, 227, 178, 0.12),
+            transparent 70%
+        ),
+        #0d1929;
+}
+
+#projects .phone-frame {
+    position: relative;
+    width: 174px;
+    max-width: 80%;
+    padding: 7px;
+    border: 2px solid #526174;
+    border-radius: 28px;
+    background: #05080d;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    transform: perspective(900px) rotateY(-5deg);
+    transition: transform 0.35s ease,
+                border-color 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+#projects .showcase-card:hover .phone-frame {
+    transform: perspective(900px) translateY(-4px)
+               rotateY(0deg) rotateX(2deg);
+    border-color: #20e3b2;
+    box-shadow: 0 15px 35px rgba(32, 227, 178, 0.16);
+}
+
+#projects .phone-camera {
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 50%;
+    width: 40px;
+    height: 9px;
+    border-radius: 20px;
+    background: #05080d;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+#projects .phone-main-screen {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 20px;
+    background: #101827;
+}
+
+#projects .phone-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#projects .screen-thumb {
+    width: 48px;
+    height: 62px;
+    padding: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #334155;
+    border-radius: 9px;
+    background: #080e19;
+    opacity: 0.7;
+    transition: 0.25s ease;
+}
+
+#projects .screen-thumb:hover,
+#projects .screen-thumb.active {
+    opacity: 1;
+    border-color: #20e3b2;
+    transform: translateY(-2px);
+}
+
+#projects .screen-thumb img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+#projects .phone-caption {
+    color: #91a0b5;
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    text-align: center;
+}
+
+#projects .showcase-card {
+    transition: transform 0.35s ease,
+                border-color 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+#projects .showcase-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(32, 227, 178, 0.65);
+    box-shadow: 0 15px 35px rgba(32, 227, 178, 0.08);
+}
+
+#projects .project-note {
+    margin-top: 14px;
+    color: #91a0b5;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+#projects .project-availability {
+    margin-top: 18px;
+}
+
+#projects .project-availability h4 {
+    margin-bottom: 8px;
+    color: #f1f5f9;
+}
+
+@media (max-width: 600px) {
+    #projects .phone-showcase {
+        min-height: 340px;
+    }
+
+    #projects .phone-frame {
+        width: 160px;
+    }
+
+    #projects .phone-main-screen {
+        height: 280px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #projects .phone-frame,
+    #projects .showcase-card,
+    #projects .screen-thumb {
+        transition: none;
+    }
+}
+
