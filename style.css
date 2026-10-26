@@ -1526,3 +1526,60 @@ textarea:focus-visible {
     }
 }
 
+/* Premium Interactive Project Cards */
+
+.project-card {
+    position: relative;
+    transform: perspective(1000px) translateY(0);
+    transform-style: preserve-3d;
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+    border: 1px solid #1c3045;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* Emerald glow + subtle lift */
+.project-card:hover {
+    transform: perspective(1000px)
+        translateY(-7px)
+        rotateX(2deg)
+        rotateY(-2deg);
+
+    border-color: #20e3b2;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.25),
+        0 0 22px rgba(32, 227, 178, 0.12);
+}
+
+/* Smooth image zoom */
+.project-card img {
+    transition: transform 0.45s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.035);
+}
+
+/* Keyboard accessibility */
+.project-card:focus-within {
+    outline: 2px solid #20e3b2;
+    outline-offset: 4px;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .project-card,
+    .project-card img {
+        transition: none;
+    }
+
+    .project-card:hover,
+    .project-card:hover img {
+        transform: none;
+    }
+}
+
