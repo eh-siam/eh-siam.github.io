@@ -1492,3 +1492,37 @@ textarea:focus-visible {
     }
 }
 
+/* Attendance Tracker showcase gallery */
+#attendance-tracker-demo .event-demo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: start;
+}
+
+#attendance-tracker-demo .event-demo-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+#attendance-tracker-demo .event-demo-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+    object-position: top center;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    #attendance-tracker-demo .event-demo-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    #attendance-tracker-demo .event-demo-image img {
+        max-height: 480px;
+    }
+}
+
