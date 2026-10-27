@@ -1741,3 +1741,77 @@ textarea:focus-visible {
     }
 }
 
+
+/* E-commerce commercial showcase */
+
+.ecommerce-project-card {
+    position: relative;
+    border-color: rgba(32, 227, 178, 0.22);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(32, 227, 178, 0.045),
+            transparent 45%
+        ),
+        #0d1929;
+}
+
+.ecommerce-project-card:hover {
+    border-color: rgba(32, 227, 178, 0.65);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24),
+                0 0 24px rgba(32, 227, 178, 0.08);
+}
+
+.ecommerce-project-card .project-type {
+    color: #20e3b2;
+}
+
+.ecommerce-project-card .ecommerce-screenshots {
+    align-items: center;
+    gap: 12px;
+    padding: 20px 12px;
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(32, 227, 178, 0.12),
+            transparent 72%
+        ),
+        #080e19;
+    border-radius: 14px;
+}
+
+.ecommerce-project-card .ecommerce-screenshots img {
+    width: calc(33.333% - 8px);
+    max-height: 290px;
+    object-fit: contain;
+    border-radius: 12px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.ecommerce-project-card .ecommerce-screenshots img:hover {
+    transform: translateY(-5px) scale(1.025);
+    box-shadow: 0 8px 25px rgba(32, 227, 178, 0.12);
+}
+
+@media (max-width: 600px) {
+    .ecommerce-project-card .ecommerce-screenshots {
+        gap: 7px;
+        padding: 14px 7px;
+    }
+
+    .ecommerce-project-card .ecommerce-screenshots img {
+        width: calc(33.333% - 5px);
+        max-height: 210px;
+        border-radius: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ecommerce-project-card,
+    .ecommerce-project-card .ecommerce-screenshots img {
+        transition: none;
+    }
+}
+
+
