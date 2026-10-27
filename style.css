@@ -1814,4 +1814,67 @@ textarea:focus-visible {
     }
 }
 
+/* Fix: E-commerce screenshots too small */
+
+#projects .ecommerce-project-card .ecommerce-screenshots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    min-height: 0;
+    padding: 28px 18px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(32, 227, 178, 0.10),
+            transparent 72%
+        ),
+        #080e19;
+    border-radius: 16px;
+}
+
+#projects .ecommerce-project-card .ecommerce-screenshots img {
+    display: block;
+    flex: 0 1 180px;
+    width: calc(33.333% - 16px);
+    min-width: 0;
+    height: auto;
+    max-height: 360px;
+    object-fit: contain;
+    object-position: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: transparent;
+    border: 1px solid #26384b;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#projects .ecommerce-project-card .ecommerce-screenshots img:hover {
+    transform: translateY(-5px);
+    border-color: #20e3b2;
+    box-shadow: 0 12px 28px rgba(32, 227, 178, 0.12);
+}
+
+@media (max-width: 600px) {
+    #projects .ecommerce-project-card .ecommerce-screenshots {
+        gap: 10px;
+        padding: 22px 10px;
+    }
+
+    #projects .ecommerce-project-card .ecommerce-screenshots img {
+        flex-basis: 0;
+        width: calc(33.333% - 7px);
+        max-height: 300px;
+        border-radius: 10px;
+    }
+}
+
 
