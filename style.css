@@ -2077,4 +2077,190 @@ textarea:focus-visible {
 
 
 
+/* =========================================
+   UNIFIED PROJECT CARD DESIGN
+   E-commerce + Attendance Tracker
+========================================= */
+
+/* Keep both cards visually consistent */
+#projects .showcase-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(32, 227, 178, 0.25);
+    border-radius: 20px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17, 31, 49, 0.96),
+            rgba(10, 20, 34, 0.97)
+        );
+}
+
+/* Same header spacing */
+#projects .showcase-card .project-top {
+    min-height: 70px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Same screenshot gallery container */
+#projects .ecommerce-project-card .ecommerce-screenshots,
+#projects .compact-project-card > .event-screenshots {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 12px;
+    width: auto;
+    min-height: 0;
+    margin: 0 20px;
+    padding: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(145, 160, 181, 0.10);
+    border-radius: 16px;
+    background: #091521;
+}
+
+/* Same screenshot dimensions and appearance */
+#projects .ecommerce-project-card .ecommerce-screenshots img,
+#projects .compact-project-card > .event-screenshots img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    min-width: 0;
+    padding: 4px;
+    object-fit: contain;
+    object-position: center;
+    border: 1px solid rgba(145, 160, 181, 0.18);
+    border-radius: 12px;
+    background: #080e19;
+    transition:
+        transform 280ms ease,
+        border-color 280ms ease;
+}
+
+#projects .ecommerce-project-card .ecommerce-screenshots img:hover,
+#projects .compact-project-card > .event-screenshots img:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+/* Same content layout */
+#projects .showcase-card .showcase-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+}
+
+#projects .showcase-card .showcase-body h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+#projects .showcase-card .showcase-body > p {
+    margin: 0 0 16px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+/* Same technology badges */
+#projects .showcase-card .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 22px;
+}
+
+#projects .showcase-card .tech-list span {
+    padding: 6px 10px;
+    border: 1px solid rgba(145, 160, 181, 0.18);
+    border-radius: 8px;
+    color: #cbd5e1;
+    background: rgba(145, 160, 181, 0.04);
+    font-size: 11px;
+}
+
+/* Same inquiry link */
+#projects .showcase-card .showcase-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    padding: 11px 0 0;
+    border: 0;
+    border-radius: 0;
+    color: var(--accent);
+    background: transparent;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Same hover effect */
+#projects .showcase-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(32, 227, 178, 0.65);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+}
+
+/* Tablet and mobile */
+@media (max-width: 900px) {
+    #projects .ecommerce-project-card .ecommerce-screenshots img,
+    #projects .compact-project-card > .event-screenshots img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    #projects .ecommerce-project-card .ecommerce-screenshots,
+    #projects .compact-project-card > .event-screenshots {
+        gap: 8px;
+        margin-inline: 12px;
+        padding: 12px 8px;
+    }
+
+    #projects .ecommerce-project-card .ecommerce-screenshots img,
+    #projects .compact-project-card > .event-screenshots img {
+        height: 200px;
+        padding: 2px;
+    }
+
+    #projects .showcase-card .project-top {
+        padding: 16px 14px;
+    }
+
+    #projects .showcase-card .showcase-body {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    #projects .ecommerce-project-card .ecommerce-screenshots img,
+    #projects .compact-project-card > .event-screenshots img {
+        height: 165px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #projects .showcase-card,
+    #projects .showcase-card img {
+        transition: none;
+    }
+
+    #projects .showcase-card:hover,
+    #projects .showcase-card img:hover {
+        transform: none;
+    }
+}
+
+
+
+
 
